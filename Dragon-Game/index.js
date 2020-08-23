@@ -49,6 +49,9 @@ setInterval(() => {
   offsetY = Math.abs(dy - oy);
   // console.log(offsetX, offsetY)
   if (offsetX < 73 && offsetY < 52) {
+    dino.style.transition = "all 10s";
+
+    dino.style.bottom = "-700px";
     gameOver.style.visibility = "visible";
     gameOver.innerHTML = "Game Over - Reload to Play Again";
     gameOver.style.color = "#FFD300";
@@ -59,7 +62,7 @@ setInterval(() => {
     setTimeout(() => {
       audiogo.pause();
       audio.pause();
-    }, 1000);
+    }, 3000);
   } else if (offsetX < 145 && cross) {
     score += 1;
     updateScore(score);
