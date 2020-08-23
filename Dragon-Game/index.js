@@ -59,6 +59,7 @@ setInterval(() => {
     gameOver.style.paddingTop = "100px";
     obstacle.classList.remove("obstacleAni");
     audiogo.play();
+    audio.pause();
     setTimeout(() => {
       audiogo.pause();
       audio.pause();
